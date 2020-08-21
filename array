@@ -1,0 +1,17 @@
+def missing(arr,n):
+    ls=[]
+    for i in range(n-1):
+        if arr[i]!=arr[i+1]-1:
+             ls.append(arr[i+1]-1)
+        else:
+            continue
+    return ls
+if __name__ == "__main__":
+    arr=[1, 2, 3, 4, 4, 7, 7]
+    arr=list(set(arr))
+    arr.sort()
+    n=len(arr)
+    ans=missing(arr,n)
+    print(*ans)
+    
+        
